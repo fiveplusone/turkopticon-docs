@@ -1,0 +1,55 @@
+# Frequently asked questions
+
+* [I am a requester. Can you delete or censor a review of me?](#censor)
+* [I am a requester and I changed my name on Mechanical Turk. Can you change my name on Turkopticon?](#name_change)
+* [My display name is based on my email address (e.g., s...@g...). How do I change it?](#display_name_change)
+* [Can I delete a review I posted?](#delete_review)
+* [Can I delete my account?](#delete_account)
+* [Can I edit or delete a comment I posted?](#edit_or_delete_comment)
+
+## <a name="censor"></a> I am a requester. Can you delete or censor a review of me?
+
+Delete? No.
+
+Censor? Almost certainly no.
+
+With the exception of technical errors (e.g., a review posted twice), we do not delete reviews, even at the request of the author. In the case of doubly posted reviews, we delete the duplicate only at the request of the author. (In the future, we may allow review authors to delete their reviews.)
+
+In general, requesters are encouraged to comment on reviews rather than flag. But if a review clearly falls within the [flagging guidelines](policy#flagging), please flag it.
+
+We have had several cases of particularly angry workers posting contact information about requesters. At present it is our policy not to censor this information if it is discoverable via a simple Google search. As of 6 August 2013, we have had exactly one case in which we agreed to censor the information. This case was fairly extreme, involving harassment of the requester at their personal email address (which was not discoverable via simple Google search of the requester name) for an extended period of time. If your case is similar, we may consider censoring the contact information.
+
+## <a name="name_change"></a> I am a requester and I changed my name on Mechanical Turk. Can you change my name on Turkopticon?
+
+Yes. Please post to [turkopticon-discuss](https://groups.google.com/forum/#!forum/turkopticon-discuss). Normally we will change your name on Turkopticon to
+
+> Your New Name (was Your Old Name)
+
+In exceptional cases, we may remove the old name entirely. Generally we try to avoid doing this, as it could cause significant confusion. Factors that make it more likely for us to do this include:
+
+* The requester account has not been used in a long time
+* Your old name was your personal name
+
+Even if we remove the old name entirely, we will keep a private record of it in our database.
+
+## <a name="display_name_change"></a> My display name is based on my email address (e.g., s...@g...). How do I change it?
+
+In general, once your display name is set, it is supposed to stay as it is. But if there was a mistake and somehow your display name was set to the default display name (which is based on the email address you used to sign up for Turkopticon), [email us](mailto:turkopticon@differenceengines.com) and we will "unset" it, after which you can pick a different display name.
+
+If you already have a "real" display name, we will not unset it. The point of this is to create a little bit of accountability.
+
+## <a name="delete_review"></a> Can I delete a review I posted?
+
+For now, no.
+
+If you managed to post a review of the same requester twice (i.e., there was a technical error), [email us](mailto:turkopticon@differenceengines.com) and we will delete the duplicate, as long as nobody else has flagged or commented on it yet.
+
+Allowing people to delete their own reviews is on our development list.
+
+## <a name="delete_account"></a> Can I delete my account?
+
+For now, no. Allowing you to do this is on our development list.
+
+## <a name="edit_or_delete_comment"></a> Can I edit or delete a comment I posted?
+
+For now, no. Allowing you to do this is on our development list.

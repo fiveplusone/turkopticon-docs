@@ -1,0 +1,203 @@
+# Turkopticon development blog
+
+**February 2014** [13](#2014.02.13) [14](#2014.02.14) [17](#2014.02.17) [18](#2014.02.18) [19](#2014.02.19) [20](#2014.02.20)
+
+## <a name="2014.02.20"></a>Thu Feb 20 2014
+
+Working projects:
+
+* Move Turkopticon to turkopticon.info/Linode
+* Let users edit own reviews and comments
+* Let administrators edit reviews and comments through user interface
+
+Initial goals for today:
+
+* Document development workflow on this site
+* Let administrators edit comments
+* Let users edit own comments
+* When a user or admin edits a review, a notice with timestamp should be added
+  * It should not be possible to remove this notice
+  * Notices should accumulate in a reasonable way if a review is edited multiple times
+* When a user or admin edits a comment, a notice with timestamp should be added (not removable, should accumulate reasonably)
+* Close github issues for above with comments pointing to appropriate commits
+* Merge above changes into master
+* Push these changes to live site on turkopticon.ucsd.edu
+* Change "development schedule" on docs.turkopticon.info/devel to "in progress"
+* Update docs.turkopticon.info to reflect change to docs.turkopticon.info/devel
+
+Completed: all.
+
+Goals for Monday:
+
+* Buy SSL certificate
+* Set up SSL certificate (serve data to extension over HTTPS)
+* Make new version of user.js that calls api.turkopticon.info over HTTPS (don't post yet; it won't work, as the DB will not be up to date)
+
+## <a name="2014.02.19"></a>Wed Feb 19 2014
+
+Working projects:
+
+* Move Turkopticon to turkopticon.info/Linode
+* Let users edit own reviews and comments
+* Let administrators edit reviews and comments through user interface
+
+Initial goals for today:
+
+* Buy SSL certificate
+* Set up SSL certificate (serve data to extension over HTTPS)
+* Make new version of user.js that calls api.turkopticon.info over HTTPS
+* Post new user.js to turkopticon-discuss with install info
+
+Completed:
+
+* Create development sandbox at devel.turkopticon.info
+* Create development workflow
+* Put devel.turkopticon.info under version control
+* Start using github issue tracker (<a href="https://github.com/fiveplusone/turkopticon-rails-app/issues/">here</a>)
+* Let administrators edit reviews
+
+Not attempted:
+
+* Buy SSL certificate
+* Set up SSL certificate (serve data to extension over HTTPS)
+* Make new version of user.js that calls api.turkopticon.info over HTTPS
+* Post new user.js to turkopticon-discuss with install info
+
+Notes:
+
+Yesterday a racist comment was posted to Turkopticon that was designed to bypass our profanity filter. I removed the comment manually. But this is a new kind of abuse that makes two projects more urgent:
+
+* Let administrators edit reviews and comments through the user interface
+* Update the moderation system
+
+The second will involve talking to users at length. It will happen in the future. The first can be done quickly. To do it, I set up the development sandbox on devel.turkopticon.info and created a development workflow using git branches.
+
+Goals for tomorrow:
+
+* Document development workflow on this site
+* Let administrators edit comments
+* Let users edit own comments
+* When a user or admin edits a review, a notice with timestamp should be added
+  * It should not be possible to remove this notice
+  * Notices should accumulate in a reasonable way if a review is edited multiple times
+* When a user or admin edits a comment, a notice with timestamp should be added (not removable, should accumulate reasonably)
+* Close github issues for above with comments pointing to appropriate commits
+* Merge above changes into master
+* Push these changes to live site on turkopticon.ucsd.edu
+* Change "development schedule" on docs.turkopticon.info/devel to "in progress"
+* Update docs.turkopticon.info to reflect change to docs.turkopticon.info/devel
+
+## <a name="2014.02.18"></a>Tue Feb 18 2014
+
+Working project: Move Turkopticon to turkopticon.info/Linode
+
+Initial goals for today:
+
+* Send email from turkopticon.info
+  * crontab should send me mail with sendmail
+  * Rails app should send through gmail (turkopticon.maint@gmail)
+
+Completed:
+
+* Send email from turkopticon.info
+  * crontab should send me mail with sendmail
+  * Rails app should send through gmail (turkopticon.maint@gmail)
+* Put Rails app (turkopticon.info) under version control <a href="https://github.com/fiveplusone/turkopticon-rails-app">on github</a>
+  * Add LICENSE file (Affero GPL)
+* Add LICENSE file (Affero GPL) to <a href="https://github.com/fiveplusone/turkopticon-php-api">PHP API repository</a>
+
+Goals for tomorrow:
+
+* Set up SSL on api.turkopticon.info
+  * Buy SSL certificate
+  * Set up SSL certificate (serve data to extension over HTTPS)
+  * Make new version of user.js that calls api.turkopticon.info over HTTPS
+  * Post new user.js to turkopticon-discuss with install info
+
+## <a name="2014.02.17"></a>Mon Feb 17 2014
+
+Working project: Move Turkopticon to turkopticon.info/Linode
+
+Initial goals for today:
+
+* Get production Rails application working on turkopticon.info
+* Send email from turkopticon.info
+
+Completed:
+
+* Get production Rails application working on turkopticon.info
+
+Not attempted:
+
+* Send email from turkopticon.info
+
+Goals for tomorrow:
+
+* Send email from turkopticon.info
+  * crontab should send me mail with sendmail
+  * Rails app should send through gmail (turkopticon.maint@gmail)
+
+Notes:
+
+I will plan to post a notice to the site and to turkopticon-discuss at least 24 hours in advance of redirecting everything to turkopticon.info from turkopticon.ucsd.edu.
+
+## <a name="2014.02.14"></a>Fri Feb 14 2014
+
+Working project: Move Turkopticon to turkopticon.info/Linode
+
+Initial goals for today:
+
+* Replicate UCSD production database on quaoar
+
+Completed: None.
+
+Failed:
+
+* Replicate UCSD production database on quaoar
+
+Notes:
+
+I tried systematically to connect to the UCSD VPN using the vpnc and anyconnect clients. Both failed, even with all firewall rules disabled. My guess is I am missing a setting, but I am going to stop trying. I uninstalled both VPN clients and undid the changes to the databases and MySQL configurations on both the UCSD server and quaoar. Instead of replicating the database, I will move the Rails application to quaoar and redirect calls to the API on the UCSD to the API on quaoar. This is the same pattern I used when we moved to UCSD, and it worked okay.
+
+Schedule changes:
+
+* Dropped "Replicate UCSD production database on quaoar"
+* Moved "Move production Rails application to turkopticon.info" and associated tasks ahead of "Move PHP API"
+
+## <a name="2014.02.13"></a> Thu Feb 13 2014
+
+Working project: Move Turkopticon to turkopticon.info/Linode
+
+Initial goals for today:
+
+* Make sure all PHP files are in place and most recent versions
+* Replicate UCSD production database on quaoar
+* Make sure API log will not grow indefinitely
+* Set up SSL
+* Make new version of user.js that calls api.turkopticon.info over HTTPS
+* Post new user.js to turkopticon-discuss with install info
+
+Completed:
+
+* Make sure all PHP files are in place and most recent versions
+* Put PHP API under version control and on github ([here](https://github.com/fiveplusone/turkopticon-php-api))
+* Make sure API log will not grow indefinitely
+* Transfer ownership of Chrome extension to turkopticon.maint@gmail.com
+
+Failed:
+
+* Replicate UCSD production database on quaoar
+
+Not attempted:
+
+* Set up SSL
+* Make new version of user.js that calls api.turkopticon.info over HTTPS
+* Post new user.js to turkopticon-discuss with install info
+
+Notes:
+
+I spent about five hours today trying to set up replication. I think MySQL and the databases are configured correctly. But I need to connect to the UCSD VPN to connect to the UCSD server. I have installed the UCSD VPN client (Cisco AnyConnect) but have not yet managed to connect to the VPN. Currently I get an "unable to contact" error. I think I need to open ports in the firewall to connect to the VPN. I have tried a few things but will try more systematically tomorrow.
+
+Schedule changes:
+
+* All tasks up to Mon Feb 24 have been pushed back one working day

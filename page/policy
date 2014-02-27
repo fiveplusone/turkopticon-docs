@@ -1,0 +1,57 @@
+# Policy
+
+* [How to write a review](#reviewing)
+* [How to flag](#flagging)
+* [How moderation works](#moderation)
+
+## <a name="reviewing"></a> How to write a review
+
+Give the ratings you feel best describe your experience.
+
+If one of the fields is not relevant, leave it blank.
+
+For example, if you didn't need to communicate with the requester, leave that field blank.
+
+Don't include or link to profanity, racial slurs, or ethnic slurs.
+
+Don't personally insult or attack requesters or other workers. Calling a requester "cheap" is okay, but anything stronger is subject to being hidden.
+
+If you're a requester, don't review yourself. Comment instead.
+
+Reviews that are profane or insulting or appear to be requester self-reviews may be hidden.
+
+The most up-to-date version of these guidelines will always be posted on the [review page](http://turkopticon.ucsd.edu/report) (Turkopticon login required).
+
+## <a name="flagging"></a> How to flag
+
+The review is a way for workers to describe their work experience.
+
+The worker has a right to their review.
+
+Flag a review if and only if:
+
+> The review contains profanity, racial/ethnic slurs that weren't automatically filtered, or incitements to violence, _or_
+
+> The review personally insults or attacks requesters or other workers, or
+
+> You have a good reason to believe the review was written by the requester.
+
+If you think the review was written by the requester, you must explain why in your comment. "Bogus review" is not a useful explanation for moderators.
+
+Do not flag a review just because you disagree with it, or because you had a different experience. Two different workers might have completely different experiences with the same requester. A review might be suspicious, but that doesn't mean it was written by the requester or a shill. Requesters do sneakily self-review, but it's rare.
+
+Flags not following these guidelines will be ignored by the moderators.
+
+If you're not sure if you should flag a review, don't.
+
+The most up-to-date version of these guidelines will always appear right above the text box for flagging reviews.
+
+## <a name="moderation"></a> How moderation works
+
+When you flag a review, it appears on the [list of flagged reviews](http://turkopticon.ucsd.edu/flagged). Moderators go over this list occasionally. If a moderator agrees with your flag (which is much more likely if your flag is in accordance with the [flagging guidelines](#flagging)), they will also flag the review. Once a review has at least two flags, *at least one of which is from a moderator*, it will be hidden. This means:
+
+> It won't come up in the main list of reviews for the requester (although it can still be seen by clicking the link to hidden reviews at the bottom of the review list for that requester), and
+
+> The scores in that review won't be included in the averages displayed for the requester in the browser add-on.
+
+If somebody flagged your review spuriously, the best thing to do is usually to ignore them.

@@ -1,0 +1,15 @@
+# About Turkopticon
+
+## <a name="what"></a> What
+
+[Turkopticon](http://turkopticon.ucsd.edu) is a web application and browser add-on for reviewing employers (“requesters”) on [Amazon Mechanical Turk](https://mturk.com).
+
+## <a name="why"></a> Why
+
+Turkopticon exists to help Mechanical Turk workers share information about good and bad tasks and employers.
+
+Its initial design was motivated by the [responses to our 2008 Workers' Bill of Rights survey](http://turkwork.differenceengines.com/blog/).
+
+## <a name="who"></a> Who
+
+With the help of current and past moderators (in alphabetical order) Anne M, Honuagal, and taintturk, Turkopticon is maintained by [Lilly Irani](http://quote.ucsd.edu/lirani) and [Six Silberman](http://wtf.tw). Lilly is an assistant professor at the University of California, San Diego. Six is a graduate student at the University of California, Irvine. Turkopticon was built by Irani and Silberman in 2008, when they were both graduate students at the University of California, Irvine, in a class taught by [Beatriz da Costa](http://blog.creative-capital.org/2013/01/remembering-beatriz-da-costa-1974-2012/).

@@ -1,0 +1,25 @@
+# Known issues and feature requests
+
+* JSON.parse errors for some Firefox users
+* Extension sometimes slow in both Firefox and Chrome
+* Useless reviews; "at-a-glance" rating no longer trustworthy
+* Since server move to UCSD, angry requesters complain to UCSD
+* Some users don't get verification emails
+* Website is vulnerable to SQL injection attacks
+* Search is buggy
+* Requester list page is slow
+* Firefox extension only passes "preliminary review"
+* Can't change attribute score to "N/A"
+* Can't edit own comments
+* Can't delete own comments
+* Can't delete own reviews
+* Can't delete account
+* Requesters sometimes change names on AMT, causing general confusion
+* Would like to flag or otherwise moderate comments
+* Would like to get email when new review for a requester is posted
+* Would like to get email when review flagged or commented
+* Would like to save draft review
+* Would like to be able to see review after posting, not be sent back to mturk
+* People often accidentally set display name to default ("s...@g...")
+* Moderator queue grows indefinitely; should be silent 'ignore flag' action
+* Policies are unclear; policy documents inconsistent and disorganized

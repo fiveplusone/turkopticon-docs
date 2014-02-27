@@ -1,0 +1,9 @@
+php_value error_log "../log/php_error_log"
+php_value auto_prepend_file "head.php"
+php_value auto_append_file "foot.php"
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(about|policy|faq|devel|blog)$ page.php?page=$1
+
+ErrorDocument 404 /404.php
