@@ -184,19 +184,38 @@ For information on branching in git, read <a href="http://git-scm.com/book/en/Gi
 2. <code>cd /home/turkopticon/public/devel.turkopticon.info/turkopticon</code>
 3. <code>git branch issueXX</code>, where <code>XX</code> is the number of the <a href="https://github.com/fiveplusone/turkopticon-rails-app/issue">issue</a> the feature aims to address. If there is no issue, either make one or name the branch something descriptive (e.g., <code>let-admins-edit-comments</code>).
 4. <code>git checkout issueXX</code>
-5. Make and commit changes.
-6. To test, restart the app while this branch is checked out (<code>touch tmp/restart.txt</code>).
-7. Once complete and tested, merge the branch into <code>devel</code>:
+5. Make changes to files. For example:
+<blockquote>
+  <code>emacs app/views/layouts/generic.haml</code>
+</blockquote>
+6. Stage changed files. For example:
+<blockquote>
+  <code>git add app/views/layouts/generic.haml</code>
+</blockquote>
+To add all changed files in tree:
+<blockquote>
+  <code>git add .</code>
+</blockquote>
+7. Commit changes with descriptive message:
+<blockquote>
+  <code>git commit -m 'descriptive message'</code>
+</blockquote>
+Use the syntax "fixes #XX" if the changes in the commit close issue XX; e.g.:
+<blockquote>
+  <code>git commit -m 'descriptive message; fixes #34'</code>
+</blockquote>
+8. To test, restart the app while this branch is checked out (<code>touch tmp/restart.txt</code>).
+9. Once complete and tested, merge the branch into <code>devel</code>:
 <blockquote>
   <code>git checkout devel</code><br/>
   <code>git merge issueXX</code>
 </blockquote>
-8. Restart the app again to make sure the merge worked and didn't break anything (<code>touch tmp/restart.txt</code>).
-9. Delete the feature branch:
+10. Restart the app again to make sure the merge worked and didn't break anything (<code>touch tmp/restart.txt</code>).
+11. Delete the feature branch:
 <blockquote>
   <code>git branch -d issueXX</code>
 </blockquote>
-10. Push to the github repository:
+12. Push to the github repository:
 <blockquote>
   <code>git push origin devel</code>
 </blockquote>
