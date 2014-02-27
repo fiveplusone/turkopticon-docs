@@ -1,6 +1,74 @@
 # Turkopticon development blog
 
-**February 2014** [13](#2014.02.13) [14](#2014.02.14) [17](#2014.02.17) [18](#2014.02.18) [19](#2014.02.19) [20](#2014.02.20)
+**February 2014** [13](#2014.02.13) [14](#2014.02.14) [17](#2014.02.17) [18](#2014.02.18) [19](#2014.02.19) [20](#2014.02.20) [26](#2014.02.26)
+
+## <a name="2014.02.26"></a>Wed Feb 26 2014
+
+Working project: Update documentation site, communicate with users
+
+Initial goals for today:
+
+* Buy SSL certificate
+* Set up SSL certificate (serve data to extension over HTTPS)
+* Make new version of user.js that calls api.turkopticon.info over HTTPS (don't post yet; it won't work, as the DB will not be up to date)
+
+Completed: None.
+
+Attempted: None.
+
+Notes:
+
+1. Sunday Feb 23 Lilly and I met and talked about Turkopticon at length. We prioritized all the tasks on the [known issues list](http://docs.turkopticon.info/devel#issues). Monday and Tuesday I spent on non-Turkopticon tasks. My goals for today are below.
+
+2. Midori wrote to tell us that free SSL certificates can be had from [startssl.com](http://www.startssl.com).
+
+Revised goals for today:
+
+* Put docs.turkopticon.info on github
+* Update development page on this site based on notes from meeting with Lilly
+* Make an [issue](https://github.com/fiveplusone/turkopticon-rails-app/issues) for each task
+* Post to turkopticon-discuss:
+  * Now open source
+  * Current priorities
+  * Work plan
+      * Schedule, not deadlines
+      * When an email arrives that has a task associated with it, bump that task
+  * Big open questions
+      * Moderation in the short and medium-term
+          * Short term: add more moderators. Process?
+          * Adding more moderators does not solve the problem of moderating comments, which can't be flagged, but Lilly has volunteered to edit them manually if problem comments appear (and she can now do this because administrators can now edit comments through the site)
+          * Long term: does Turkopticon need its own reputation system? Is there an elegant solution? We thought about letting people 'turn down' people whose reviews they don't trust. But this could be gamed on both ends: people who wanted to maliciously 'turn down' other users but actually trusted their reviews could simply not log in to the extension, or use multiple accounts, and if someone was 'turned down', they could make a new account and keep trolling.
+      * Review form
+          * Let reviewers create their own fields?
+
+Completed:
+
+* Put docs.turkopticon.info on github
+* Update development page on this site based on notes from meeting with Lilly
+
+Not completed:
+
+* Make an issue for each task
+* Post to turkopticon-discuss
+
+Goals for tomorrow:
+
+* Make an [issue](https://github.com/fiveplusone/turkopticon-rails-app/issues) for each development task
+* Use gmail to send mail from turkopticon.ucsd.edu
+* Change text on "Set display name" button to "Save this as my display name"
+* Reject default display name
+* Add "N/A" as concrete option on review form (new and edit)
+* Deal reasonably with requester name changes (update user script only)
+  * Add requester name field to review table
+  * When populating add review form, get requester name from page, not database
+  * Post new version of user script to home page
+  * Add  installation instructions for user script to home page
+* Post to turkopticon-discuss:
+  * This and next week's development goals (including things done today; see 'in progress')
+  * Do we need more moderators?
+  * Tentative schedule and structured approach for discussing other open questions (and link to docs.turkopticon.info/devel#questions)
+  * Jay intro (better search is coming...)
+* Post to turkopticon-mods asking about 'ignore flag' action
 
 ## <a name="2014.02.20"></a>Thu Feb 20 2014
 

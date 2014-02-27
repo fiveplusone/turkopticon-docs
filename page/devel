@@ -3,95 +3,118 @@
 The point of this page is make the following information public:
 
 * [Known issues (bugs, design problems, feature requests, etc.)](#issues)
+* [Open questions](#questions)
 * [Development tasks](#tasks)
 * [Tasks in progress](#in_progress)
 * [Development workflow](#workflow)
 
-This page was last updated 5:35 PM PST February 20, 2014.
+This page was last updated 7:05 PM PST February 26, 2014.
 
 ## <a name="issues"></a> Known issues
 
-* JSON.parse errors for some Firefox users
-* Extension sometimes slow in both Firefox and Chrome
+### Unprioritized, big questions
+
 * Useless reviews; "at-a-glance" rating no longer trustworthy
-* Since server move to UCSD, angry requesters complain to UCSD
+* Does moderation need to be redesigned?
+* Old reviews should not count the same as new reviews
+* Reviewing HITs, not just requesters
+
+### Unprioritized, medium-sized questions
+
+* Moderator queue grows indefinitely; should be silent 'ignore flag' action
+* Flagging or otherwise moderating comments
+
+### Highest priority
+
 * Some users don't get verification emails
-* Search is buggy
-* Requester list page is slow
-* Firefox extension only passes "preliminary review"
+
+### High priority
+
+* People often accidentally set display name to default ("s...@g...")
 * Can't change attribute score to "N/A"
-* Can't edit own comments
-* Can't delete own comments
-* Can't delete own reviews
-* Can't delete account
 * Requesters sometimes change names on AMT, causing general confusion
-* Would like to flag or otherwise moderate comments
+
+### Medium priority
+
+* Search is buggy
 * Would like to get email when new review for a requester is posted
 * Would like to get email when review flagged or commented
 * Would like to save draft review
-* Would like to be able to see review after posting, not be sent back to mturk
-* People often accidentally set display name to default ("s...@g...")
-* Moderator queue grows indefinitely; should be silent 'ignore flag' action
 * Policies are unclear; policy documents inconsistent and disorganized
-* Moderation needs to be redesigned
-* Old reviews should not count the same as new reviews (maybe)
+* Can't delete account
+* Since server move to UCSD, angry requesters complain to UCSD
+
+### Low priority
+
+* Would like to be able to see review after posting, not be sent back to mturk
+* Requester list page is slow
+* Firefox extension only passes "preliminary review"
+
+## <a name="questions"></a> Open questions
+
+* What should we do about useless reviews? Do we need to redesign moderation? (The second question connects to civility policy too.)
+* Is it urgent to flag or otherwise moderate comments? Lilly has volunteered to edit problem comments manually if people email us about them. Is that enough for now?
+* What review fields should we add to the review form? Should we let reviewers add their own fields? If so, how should these show up in the extension? Should we do this in stages (for example: add some official new fields, then let people add their own fields later)?
+* Should old reviews count less than new reviews? How do we decide the threshold? Should users be able to decide this on their own? If so, what should the default be?
+* Is it important to be able to review specific HITs, not just requesters?
+* Should we have "profile" pages for requesters? If so, what should go on them? Should requesters be allowed to "claim" these pages somehow (if this is even possible)?
+* For moderators:
+  * Is it a problem that the list of flagged reviews grows forever? Do we need a silent 'ignore flag' option that makes a flagged review disappear from the list of flagged reviews?
+  * Do we need more moderators? How should we pick them?
 
 ## <a name="tasks"></a> Development tasks
 
-### Live
+### High priority issues
 
-* [Project] Move to turkopticon.info (Linode server "quaoar")
-  * Aims to directly address issues:
-      * JSON.parse errors for some Firefox users
-          * Caused by BlueHost/UCSD server overload/slowness
-      * Extension sometimes slow in both Firefox and Chrome
-          * Caused by BlueHost/UCSD server overload/slowness
-      * Since server move to UCSD, angry requesters complain to UCSD
-          * Caused by the fact that UCSD server is owned by UCSD
-  * Aims to create the conditions of possibility to address issues:
-      * Useless reviews; "at-a-glance" rating no longer trustworthy
-          * After moving to new server, we will be able to make a development sandbox
-  * Tasks for this project:
-      * <strike>Get production Rails application working on turkopticon.info [6 h]</strike>
-      * <strike>Set up email sending from quaoar [3 h]</strike>
-          * <strike>for Rails app, can use gmail (turkopticon.maint@gmail)</strike>
-          * <strike>configure and test sendmail for crontab use</strike>
-      * <strike>Create development "sandbox" at devel.turkopticon.info [1 h]</strike>
-      * Use git/github for version control [6 h]
-          * <strike>api.turkopticon.info</strike>
-          * devel.api.turkopticon.info
-          * <strike>turkopticon.info</strike>
-          * <strike>devel.turkopticon.info</strike>
-          * docs.turkopticon.info
-      * Move PHP API
-          * <strike>Make sure all PHP files are in place and most recent versions [30 m]</strike>
-          * <strike>Replicate UCSD production database on quaoar</strike> [failed]
-          * <strike>Make sure API log will not grow indefinitely [30 m]</strike>
-          * Set up SSL
-              * Buy SSL certificate [30 m]
-              * Set up SSL certificate (serve data to extension over HTTPS) [1 h]
-      * Make new version of user.js that calls api.turkopticon.info over HTTPS [30 m]
-      * Post new user.js to turkopticon-discuss with install info [30 m]
-      * Update extensions
-          * Firefox extension (with new framework, not Greasemonkey) [3 h]
-          * Chrome extension [3 h]
-              * <strike>Transfer ownership to turkopticon.maint@gmail</strike>
-      * Create and document development workflow [3 h]
-      * Set up tools to monitor server load [6 h]
-      * Turn off Rails apps on UCSD server (301) [3 h]
-      * <strike>Remove horrific warning on turkopticon.info</strike>
+* Use gmail to send mail from turkopticon.ucsd.edu
+* Change text on "Set display name" button to "Save this as my display name"
+* Reject default display name
+* Add "N/A" as explicit option on review form (new and edit)
+* Deal reasonably with requester name changes
+  * Add requester name field to review table
+  * When populating add review form, get requester name from page, not database
+  * Get requester name from reports table (if exists) in _report.haml
+  * Post new version of user script to home page
+  * Add installation instructions for user script to home page
+  * Update extensions
+      * Get free SSL certificate for turkopticon.ucsd.edu/api
+      * Install SSL certificate
+      * Put user script on github
+      * Update Chrome extension
+      * Update Firefox extension
 
-### Backlog
+### Medium priority issues
 
-* Associate requester name with review, not just requester object
-  * This keeps track of requesters' old names while allowing reviewers to review them under their new names
-  * create requester name field in reports table
-  * get requester name from reports table (if exists) in _report.haml
-  * populate 'report your experience' link in user.js from AMT page, not API
-  * replace links to extensions on home page with links to user.js and info
-  * log user.js downloads
-  * rotate user.js download log / summarize stats
-* Reviewer should be able to change attribute score to "N/A"
+* Allow subscribing to emails for different events
+  * new review for requester
+  * review edited
+  * new comment or flag on review
+* Allow saving draft/tentative reviews
+* Allow users to delete own account
+  * Change all review ratings to N/A and body text to "The author of this review deleted their account"
+  * Change all flag and comment text to "The author of this flag/comment deleted their account"
+* Organize policy documents on this site and main site
+  * How to review
+  * How to flag
+  * How moderation works
+  * FAQ
+  * About
+      * What
+      * Why
+      * Who
+* Move to turkopticon.info
+
+### Low priority issues
+
+* Give reviewer option to see own review after posting (not go to AMT)
+* Speed up requester list page
+* Pass full Mozilla Add-On review
+* Speed up Rails app generally
+  * Page and fragment caching
+  * Optimize slow database queries
+
+### Maybe (open questions)
+
 * Add new fields to review form
   * HIT title
   * HIT description
@@ -108,44 +131,48 @@ This page was last updated 5:35 PM PST February 20, 2014.
   * what kind of HIT is it?
   * is the HIT broken?
 * Update extension for new fields
-* <strike>Allow editing own comments</strike>
-* Allow deleting own reviews
-* Allow deleting account
-* Allow subscribing to emails for different events
-  * new review for requester
-  * review edited
-  * new comment or flag on review
-* Save draft/tentative reviews
-* Allow user to unset display name if display name is default
 * Allow reviewing HITs, not just requesters
 * "Profile" pages for requesters
-* Improve search
-* Distribute moderation load more evenly (revamp moderation)
-  * Moderate comments as well as reviews
-* Speed up or drop requester list page
-* Give reviewer option to see own review after posting (not go to AMT)
-* Pass full review in Mozilla Add-On Directory
-* Make code open source
-* Speed up Rails app
-  * page/fragment caching
-  * optimize slow DB queries
 * Add donate button (only accept donations to cover monthly hosting cost)
-
-### Maybe
-
-* Create version of extension with local copy of database
 
 ## <a name="in_progress"></a> Tasks in progress
 
-**Thu Feb 20**
+**Thu Feb 27**
 
-* Document development workflow on this site
-* Let administrators edit comments
-* Let users edit own comments
-* When a user or admin edits a review, a notice with timestamp should be added
-  * It should not be possible to remove this notice
-  * Notices should accumulate in a reasonable way if a review is edited multiple times
-* When a user or admin edits a comment, a notice with timestamp should be added (not removable, should accumulate reasonably)
+* Use gmail to send mail from turkopticon.ucsd.edu
+* Change text on "Set display name" button to "Save this as my display name"
+* Reject default display name
+* Add "N/A" as concrete	 option on review form (new and edit)
+* Deal reasonably with requester name changes
+  * Add requester name field to review table
+  * When populating add review form, get requester name from page, not database
+  * Post new version of user script to home page
+  * Add	 installation instructions for user script to home page
+
+**Fri Feb 28**
+
+* Update extensions
+  * Get free SSL certificate for turkopticon.ucsd.edu/api
+  * Install SSL certificate
+  * Put user script on github
+  * Update Chrome extension
+  * Update Firefox extension
+
+**Mon Mar 3&ndash;Wed Mar 5**
+
+* Allow subscribing to emails for different events
+* Allow saving draft/tentative reviews
+* Allow users to delete own account
+* Organize policy documents on this site and main site
+* Give reviewer option to see own review after posting (not go to AMT)
+
+**Mon Mar 10&ndash;Wed Mar 12**
+
+* Move to turkopticon.info
+
+**Feb&ndash;Mar 2014 (Jay)**
+
+* Rewrite search in PHP
 
 ## <a name="workflow"></a> Development workflow
 
