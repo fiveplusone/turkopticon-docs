@@ -8,7 +8,7 @@ The point of this page is make the following information public:
 * [Tasks in progress](#in_progress)
 * [Development workflow](#workflow)
 
-This page was last updated 7:05 PM PST February 26, 2014.
+This page was last updated 5:20 PM PST February 27, 2014.
 
 ## <a name="issues"></a> Known issues
 
@@ -66,22 +66,11 @@ This page was last updated 7:05 PM PST February 26, 2014.
 
 ### High priority issues
 
-* Use gmail to send mail from turkopticon.ucsd.edu
-* Change text on "Set display name" button to "Save this as my display name"
-* Reject default display name
-* Add "N/A" as explicit option on review form (new and edit)
-* Deal reasonably with requester name changes
-  * Add requester name field to review table
-  * When populating add review form, get requester name from page, not database
-  * Get requester name from reports table (if exists) in _report.haml
-  * Post new version of user script to home page
-  * Add installation instructions for user script to home page
-  * Update extensions
-      * Get free SSL certificate for turkopticon.ucsd.edu/api
-      * Install SSL certificate
-      * Put user script on github
-      * Update Chrome extension
-      * Update Firefox extension
+* Update extensions
+  * Get free SSL certificate for turkopticon.ucsd.edu/api
+  * Install SSL certificate
+  * Update Chrome extension
+  * Update Firefox extension
 
 ### Medium priority issues
 
@@ -136,18 +125,6 @@ This page was last updated 7:05 PM PST February 26, 2014.
 * Add donate button (only accept donations to cover monthly hosting cost)
 
 ## <a name="in_progress"></a> Tasks in progress
-
-**Thu Feb 27**
-
-* Use gmail to send mail from turkopticon.ucsd.edu
-* Change text on "Set display name" button to "Save this as my display name"
-* Reject default display name
-* Add "N/A" as concrete	 option on review form (new and edit)
-* Deal reasonably with requester name changes
-  * Add requester name field to review table
-  * When populating add review form, get requester name from page, not database
-  * Post new version of user script to home page
-  * Add	 installation instructions for user script to home page
 
 **Fri Feb 28**
 

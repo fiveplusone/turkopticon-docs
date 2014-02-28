@@ -1,6 +1,63 @@
 # Turkopticon development blog
 
-**February 2014** [13](#2014.02.13) [14](#2014.02.14) [17](#2014.02.17) [18](#2014.02.18) [19](#2014.02.19) [20](#2014.02.20) [26](#2014.02.26)
+**February 2014** [13](#2014.02.13) [14](#2014.02.14) [17](#2014.02.17) [18](#2014.02.18) [19](#2014.02.19) [20](#2014.02.20) [26](#2014.02.26) [27](#2014.02.27)
+
+## <a name="2014.02.27"></a>Thu Feb 27 2014
+
+Working project: Close high-priority issues
+
+Initial goals for today:
+
+* Make an [issue](https://github.com/fiveplusone/turkopticon-rails-app/issues) for each development task
+* Use gmail to send mail from turkopticon.ucsd.edu
+* Change text on "Set display name" button to "Save this as my display name"
+* Reject default display name
+* Add "N/A" as concrete option on review form (new and edit)
+* Deal reasonably with requester name changes (update user script only)
+  * Add requester name field to review table
+  * When populating add review form, get requester name from page, not database
+  * Post new version of user script to home page
+  * Add  installation instructions for user script to home page
+* Post to turkopticon-discuss:
+  * This and next week's development goals (including things done today; see 'in progress')
+  * Do we need more moderators?
+  * Tentative schedule and structured approach for discussing other open questions (and link to docs.turkopticon.info/devel#questions)
+  * Jay intro (better search is coming...)
+* Post to turkopticon-mods asking about 'ignore flag' action
+
+Completed:
+
+* Make an [issue](https://github.com/fiveplusone/turkopticon-rails-app/issues) for each development task
+* Use gmail to send mail from turkopticon.ucsd.edu
+* Change text on "Set display name" button to "Save this as my display name"
+* Reject default display name
+* Add "N/A" as concrete option on review form (new and edit)
+* Deal reasonably with requester name changes (update user script only)
+* Removed Get Satisfaction tab from live site
+* Put live site codebase under version control
+* Made <a href="http://turkopticon.ucsd.edu/main/info2">first draft of new homepage</a>
+* Posted advisory to live homepage about using user script
+* Put user script under version control
+
+Not completed:
+
+* Post to turkopticon-discuss
+* Post to turkopticon-mods asking about 'ignore flag' action
+
+Goals for tomorrow:
+
+* Update extensions
+  * Get free SSL certificate for turkopticon.ucsd.edu/api
+  * Install SSL certificate
+  * Update Chrome extension
+  * Update Firefox extension
+  * Update homepage
+* Post to turkopticon-discuss:
+  * This and next week's development goals (including things done today; see 'in progress')
+  * Do we need more moderators?
+  * Tentative schedule and structured approach for discussing other open questions (and link to docs.turkopticon.info/devel#questions)
+  * Jay intro (better search is coming...)
+* Post to turkopticon-mods asking about 'ignore flag' action
 
 ## <a name="2014.02.26"></a>Wed Feb 26 2014
 
